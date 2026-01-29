@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pengumuman Kelolosan Staff HIMASTA-ITS 2026</title>
+
+  <!-- Font modern -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header container">
+    <img src="assets/logo.png" alt="Logo Resonansi Sinergis" class="logo" />
+    <div class="title-area">
+      <h1 class="site-title">Pengumuman Kelolosan Staff</h1>
+      <p class="muted">Masukkan NRP Anda untuk mengecek hasil seleksi — tanpa login.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card grid">
+      <div class="left">
+        <h2 class="h3">Cek Kelolosan Staff</h2>
+        <form id="cekForm" autocomplete="off" class="form">
+          <label for="nrp">Masukkan NRP</label>
+          <input id="nrp" name="nrp" type="text" inputmode="numeric" placeholder="Contoh: 5003231196" required />
+          <div class="form-row">
+            <button type="submit" class="btn primary">CEK HASIL</button>
+            <button type="button" id="resetBtn" class="btn ghost">RESET</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="right">
+        <div id="result" class="result" aria-live="polite">
+          <div class="hint">
+            <p class="muted">Hasil akan muncul di sini setelah pengecekan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p class="small muted">HIMASTA‑ITS 2026 · Kabinet Resonansi Sinergis</p>
+  </footer>
+
+  <!-- pastikan file js/cek.js ada di repo -->
+  <script src="js/cek.js"></script>
+</body>
+</html>
