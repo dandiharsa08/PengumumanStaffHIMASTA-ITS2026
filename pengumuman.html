@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pengumuman Kelolosan Staff HIMASTA-ITS 2026</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-bg">
+  <header class="site-header container small-header">
+    <img src="assets/logo.png" alt="Logo Resonansi Sinergis" class="logo small" />
+    <div class="title-area">
+      <h1 class="site-title small">Pengumuman Kelolosan Staff</h1>
+      <p class="muted small">Masukkan NRP untuk mengecek hasil seleksi — tanpa login.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card grid">
+      <div class="left">
+        <h2 class="h3">Cek Kelolosan Staff</h2>
+        <p class="muted">Masukkan NRP Anda di bawah dan tekan CEK HASIL. Anda juga dapat membuka dengan link: <code>?nrp=5003231196</code></p>
+
+        <form id="cekForm" autocomplete="off" class="form">
+          <label for="nrp">NRP</label>
+          <input id="nrp" name="nrp" type="text" inputmode="numeric" placeholder="Contoh: 5003231196" required />
+          <div class="form-row">
+            <button type="submit" class="btn primary">CEK HASIL</button>
+            <button type="button" id="resetBtn" class="btn ghost">RESET</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="right">
+        <div id="result" class="result" aria-live="polite">
+          <div class="hint">
+            <p class="muted">Hasil akan ditampilkan di sini setelah pengecekan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card info">
+      <h3 class="h4">Ketentuan Umum</h3>
+      <ul>
+        <li>Website statis — data staff diambil dari file JSON yang ada di repo.</li>
+        <li>Semua validasi dilakukan di sisi klien (JavaScript).</li>
+        <li>Jika Anda lolos, akan ditampilkan tombol untuk mengisi Google Form Welcome Party dan tombol konfirmasi WA CP.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p class="small muted">HIMASTA‑ITS 2026 · Kabinet Resonansi Sinergis</p>
+  </footer>
+
+  <script src="js/cek.js"></script>
+</body>
+</html>

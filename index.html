@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WELCOME PARTY HIMASTA-ITS 2026</title>
+
+  <!-- Google Fonts: Poppins (judul) + Inter (teks) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-bg">
+  <header class="site-header container">
+    <img src="assets/logo.png" alt="Logo Resonansi Sinergis" class="logo" />
+    <div class="title-area">
+      <h1 class="site-title">WELCOME PARTY HIMASTA‑ITS 2026</h1>
+      <p class="site-sub">Kabinet <span class="accent">Resonansi Sinergis</span></p>
+    </div>
+  </header>
+
+  <main class="container center hero-card">
+    <p class="lead">Selamat datang di laman resmi Welcome Party. Informasi pengumuman kelolosan staff tersedia di halaman pengumuman.</p>
+
+    <div class="hero-actions">
+      <a class="btn primary" href="pengumuman.html">Lihat Pengumuman Staff</a>
+      <button class="btn ghost" id="cancelRedirect">Batalkan Redirect</button>
+    </div>
+
+    <p class="muted small" id="countdownText">Mengalihkan dalam <strong id="countdown">3</strong> detik...</p>
+  </main>
+
+  <footer class="container footer">
+    <p class="small muted">HIMASTA‑ITS 2026 · Kabinet Resonansi Sinergis</p>
+  </footer>
+
+  <script>
+    // Auto redirect (3 detik) dengan opsi batal
+    (function () {
+      var seconds = 3;
+      var countdownEl = document.getElementById('countdown');
+      var timer = setInterval(() => {
+        seconds--;
+        countdownEl.textContent = seconds;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          window.location.href = 'pengumuman.html';
+        }
+      }, 1000);
+
+      document.getElementById('cancelRedirect').addEventListener('click', function () {
+        clearInterval(timer);
+        document.getElementById('countdownText').textContent = 'Redirect dibatalkan. Tekan "Lihat Pengumuman Staff" untuk melanjutkan.';
+      });
+    })();
+  </script>
+</body>
+</html>
